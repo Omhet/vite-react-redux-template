@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomeIcon from '../../icons/home.svg';
 import { Header } from '../Header/Header';
 import classes from './App.module.scss';
-import HomeIcon from '../../icons/home.svg';
-import { Example } from '../../containers/Example';
+import { MainPage } from '../../pages/MainPage/MainPage';
+import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage';
 
 export const App: FunctionComponent = () => {
   return (
@@ -12,8 +13,11 @@ export const App: FunctionComponent = () => {
         <HomeIcon />
         <Header text="Hello" />
         <Switch>
-          <Route path="/">
-            <Example />
+          <Route exact path="/">
+            <MainPage />
+          </Route>
+          <Route>
+            <NotFoundPage />
           </Route>
         </Switch>
       </div>

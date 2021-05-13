@@ -17,6 +17,7 @@
     "pre-commit": "yarn lint-staged",
     "pre-push": "run-p lint lint:style typecheck",
     "make:component": "hygen component new --name",
+    "make:page": "hygen page new --name",
     "make:container": "hygen container new --name",
     "make:slice": "hygen slice new --name"
   },

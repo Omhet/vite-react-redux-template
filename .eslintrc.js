@@ -8,6 +8,7 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
   },
   settings: {
     react: {
