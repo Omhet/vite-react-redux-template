@@ -1,13 +1,13 @@
 ---
-to: src/containers/<%= Name %>.tsx
+to: src/containers/<%= h.changeCase.pascal(name) %>.tsx
 ---
 import React, { FC } from 'react';
 import { useAppSelector, useAppDispatch } from '../store';
-import { <%= Name %> } from '../components/<%= Name %>/<%= Name %>';
+import { <%= h.changeCase.pascal(name) %> } from '../components/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>';
 
-export const <%= Name %>Container: FC = () => {
+export const <%= h.changeCase.pascal(name) %>Container: FC = () => {
   const state = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
 
-  return <<%= Name %> />
+  return <<%= h.changeCase.pascal(name) %> />
 };

@@ -1,5 +1,5 @@
 ---
-to: src/store/slices/<%= name %>.ts
+to: src/store/slices/<%= h.changeCase.camel(name) %>.ts
 ---
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -10,11 +10,11 @@ const initialState: State = {
 };
 
 const slice = createSlice({
-  name: '<%= name %>',
+  name: '<%= h.changeCase.camel(name) %>',
   initialState,
   reducers: {
   },
 });
 
-export const <%= name %>Reducer = slice.reducer;
-export const <%= name %>Actions = slice.actions;
+export const <%= h.changeCase.camel(name) %>Reducer = slice.reducer;
+export const <%= h.changeCase.camel(name) %>Actions = slice.actions;
