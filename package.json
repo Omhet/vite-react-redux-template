@@ -59,7 +59,7 @@
       "yarn lint:fix",
       "yarn format"
     ],
-    "*.css": [
+    "*.{css,scss}": [
       "yarn lint:style:fix",
       "yarn format"
     ]
