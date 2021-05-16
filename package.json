@@ -72,11 +72,13 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "yarn lint:fix",
-      "yarn format"
+      "yarn format",
+      "git add ."
     ],
     "*.{css,scss}": [
       "yarn lint:style:fix",
-      "yarn format"
+      "yarn format",
+      "git add ."
     ]
   },
   "msw": {
