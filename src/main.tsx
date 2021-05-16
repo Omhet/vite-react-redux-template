@@ -4,6 +4,11 @@ import { Provider } from 'react-redux';
 import { App } from './components/App/App';
 import './style/index.scss';
 import { store } from './store';
+import { worker } from './mocks/browser';
+
+if (import.meta.env.DEV) {
+  worker.start();
+}
 
 ReactDOM.render(
   <React.StrictMode>

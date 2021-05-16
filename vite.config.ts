@@ -7,6 +7,7 @@ export default ({ command }) => {
   const isDev = command === 'serve';
 
   return defineConfig({
+    base: '',
     css: {
       modules: {
         generateScopedName: isDev ? '[name]__[local]___[hash:base64:5]' : undefined,
