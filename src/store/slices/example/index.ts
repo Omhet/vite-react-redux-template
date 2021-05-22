@@ -1,20 +1,6 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { AppThunk } from '../index';
-import { RequestStatus } from '../../types/common';
-import { exampleRequest } from '../../api/example';
-
-export const exampleThunk = (): AppThunk => (dispatch, getState) => {
-  const {
-    example: { count },
-  } = getState();
-  console.log(count);
-  dispatch(exampleActions.increment());
-};
-
-export const exampleAsyncThunk = createAsyncThunk('example/fetchExample', async (id: string) => {
-  const data = await exampleRequest(id);
-  return data;
-});
+import { createSlice } from '@reduxjs/toolkit';
+import { RequestStatus } from '../../../types/common';
+import { exampleAsyncThunk } from './thunks';
 
 interface State {
   count: number;
