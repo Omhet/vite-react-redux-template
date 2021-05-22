@@ -1,7 +1,7 @@
 import { exampleActions } from './../example';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { exampleRequest } from '../../../api/example';
-import { AppThunk } from '../../index';
+import { AppThunk } from '../../types';
 
 export const exampleThunk = (): AppThunk => (dispatch, getState) => {
   const {
