@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { AppThunk } from '../index';
 
 interface State {
   count: number;
@@ -19,3 +20,11 @@ const slice = createSlice({
 
 export const exampleReducer = slice.reducer;
 export const exampleActions = slice.actions;
+
+export const exampleThunk = (): AppThunk => (dispatch, getState) => {
+  const {
+    example: { count },
+  } = getState();
+  console.log(count);
+  dispatch(exampleActions.increment());
+};
