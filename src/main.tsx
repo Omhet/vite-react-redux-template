@@ -5,6 +5,7 @@ import { App } from './components/App/App';
 import './style/index.scss';
 import { store } from './store';
 import { worker } from './mocks/browser';
+import './api/init';
 
 if (import.meta.env.DEV) {
   worker.start();

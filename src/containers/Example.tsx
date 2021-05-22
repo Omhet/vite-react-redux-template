@@ -1,11 +1,23 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../store';
 import { Example as ExampleComponent } from '../components/Example/Example';
-import { exampleThunk } from '../store/slices/example';
+import { exampleThunk, exampleAsyncThunk } from '../store/slices/example';
+import { RequestStatus } from '../types/common';
 
 export const Example: FC = () => {
-  const state = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
+  const status = useAppSelector((state) => state.example.status);
+  const result = useAppSelector((state) => state.example.result);
 
-  return <ExampleComponent onClick={() => dispatch(exampleThunk())} />;
+  useEffect(() => {
+    dispatch(exampleAsyncThunk('123'));
+  }, []);
+
+  return (
+    <ExampleComponent
+      isLoading={status === RequestStatus.Loading}
+      data={result?.data ?? ''}
+      onClick={() => dispatch(exampleThunk())}
+    />
+  );
 };
