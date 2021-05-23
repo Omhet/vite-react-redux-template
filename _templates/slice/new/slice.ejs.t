@@ -1,5 +1,5 @@
 ---
-to: src/store/slices/<%= h.changeCase.camel(name) %>/index.ts
+to: src/store/slices/<%= h.changeCase.camel(name) %>/slice.ts
 ---
 import { createSlice } from '@reduxjs/toolkit';
 
