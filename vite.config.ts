@@ -17,6 +17,7 @@ export default ({ command }) => {
       reactRefresh(),
       reactSvgPlugin({
         defaultExport: 'component',
+        expandProps: 'end',
       }),
     ],
   });
