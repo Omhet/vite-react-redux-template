@@ -1,8 +1,8 @@
 import React, { FC, useEffect } from 'react';
-import { useAppSelector, useAppDispatch } from '../store';
 import { Example as ExampleComponent } from '@components/Example/Example';
-import { RequestStatus } from '../types/common';
-import { exampleAsyncThunk, exampleThunk } from '../store/slices/example/thunks';
+import { exampleAsyncThunk, exampleThunk } from '@store/slices/example';
+import { RequestStatus } from '@app-types/common';
+import { useAppDispatch, useAppSelector } from '@store/hooks';
 
 export const Example: FC = () => {
   const dispatch = useAppDispatch();

@@ -16,7 +16,17 @@
     "jsx": "react",
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@containers/*": ["containers/*"],
+      "@pages/*": ["pages/*"],
+      "@hooks/*": ["hooks/*"],
+      "@icons/*": ["icons/*"],
+      "@style/*": ["style/*"],
+      "@store/*": ["store/*"],
+      "@api/*": ["api/*"],
+      "@mocks/*": ["mocks/*"],
+      "@app-types/*": ["types/*"],
+      "@config": ["config.ts"]
     }
   },
   "include": ["./src/**/*"],

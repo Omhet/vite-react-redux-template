@@ -1,9 +1,9 @@
+import { Header } from '@components/Header/Header';
+import { MainPage } from '@pages/MainPage/MainPage';
+import { NotFoundPage } from '@pages/NotFoundPage/NotFoundPage';
 import React, { FunctionComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Header } from '../Header/Header';
 import classes from './App.module.scss';
-import { MainPage } from '../../pages/MainPage/MainPage';
-import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage';
 
 export const App: FunctionComponent = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import HomeIcon from '../../icons/home.svg';
+import HomeIcon from '@icons/home.svg';
 import classes from './Example.module.scss';
 
 export interface ExampleProps {

@@ -1,4 +1,4 @@
-import { config } from './../config';
+import { config } from '@config';
 import { rest } from 'msw';
 
 const apiDomain = config.VITE_API_DOMAIN;
