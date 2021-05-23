@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import reactSvgPlugin from 'vite-plugin-react-svg';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default ({ command }) => {
@@ -19,6 +20,7 @@ export default ({ command }) => {
         defaultExport: 'component',
         expandProps: 'end',
       }),
+      tsconfigPaths(),
     ],
   });
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { App } from './components/App/App';
+import { App } from '@components/App/App';
 import './style/index.scss';
 import { store } from './store';
 import { worker } from './mocks/browser';

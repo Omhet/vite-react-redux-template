@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../store';
-import { Example as ExampleComponent } from '../components/Example/Example';
+import { Example as ExampleComponent } from '@components/Example/Example';
 import { RequestStatus } from '../types/common';
 import { exampleAsyncThunk, exampleThunk } from '../store/slices/example/thunks';
 
